@@ -58,7 +58,7 @@ class.prob <- mymod$class.prob
 
 Accuracy <- mean(pred.class==ytest)
 ytestnum <- as.numeric(as.factor(ytest))-1
-BrierScore <- mean((ytestnum-class.prob))
+BrierScore <- mean((ytestnum-class.prob)^2)
 
 cbind(Accuracy, BrierScore)
 }
